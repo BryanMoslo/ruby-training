@@ -1,6 +1,10 @@
 class String
+  # This method rotates a String the number of times passed
+
   def rotate(times)
+    return self unless times.is_a?(Fixnum)
     times = times.abs
+
     return self if self.length < 1
     result = self
     times.times do

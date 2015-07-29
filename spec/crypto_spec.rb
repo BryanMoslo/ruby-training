@@ -15,5 +15,4 @@ describe CryptoTool do
 
   it "swaps cases for uppercase strings" do
   end
-
 end
