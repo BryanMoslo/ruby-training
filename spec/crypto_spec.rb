@@ -16,4 +16,8 @@ describe CryptoTool do
   it "swaps cases for uppercase strings" do
     CryptoTool.encrypt("CASA", 1).must_equal "b9r9"
   end
+
+  it "rotates randomly the characters if no parameter passed" do
+    CryptoTool.encrypt("CASA").wont_equal "CASA"
+  end
 end
