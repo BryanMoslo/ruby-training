@@ -1,6 +1,6 @@
 class FooBar
   def self.answer_to(number)
-
+    return "#{number}" unless number.is_a? Fixnum
     return "FooBar" if is_foo_bar(number)
     return "Foo" if is_foo(number)
     return "Bar" if is_bar(number)

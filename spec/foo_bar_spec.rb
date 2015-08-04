@@ -16,4 +16,12 @@ describe FooBar do
   it "returns the number if the number is not divided exactly by 3 or 5" do
     FooBar.answer_to(8).must_equal("8")
   end
+
+  it "returns the number if the number is not divided exactly by 3 or 5" do
+    FooBar.answer_to(true).must_equal("true")
+  end
+
+  it "returns the number if the number is not divided exactly by 3 or 5" do
+    FooBar.answer_to(0).must_equal("FooBar")
+  end
 end
