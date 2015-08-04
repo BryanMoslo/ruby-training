@@ -1,9 +1,9 @@
 require 'spec_helper'
 describe PerfectDetector do
-  
+
   it "returns false if the sum of number's divisors is not the number" do
-    [ 2, 3, 7, 100, 20 ].each do
-      PerfectDetector.is_perfect?(3).must_equal false
+    [ 2, 3, 7, 100, 20 ].each do |number|
+      PerfectDetector.is_perfect?(number).must_equal false
     end
   end
 
