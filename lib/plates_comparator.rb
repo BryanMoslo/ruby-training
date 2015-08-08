@@ -1,6 +1,7 @@
 module Plates
   ALPHABET      = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   INDEX_VALUES  = [ 676000, 26000, 1000, 100, 10, 1 ]
+
   class Comparator
     def self.plate_to_decimal(plate)
       throw ArgumentError unless Plates::Validator.valid? plate
@@ -11,12 +12,7 @@ module Plates
     end
 
     def self.char_value(index, char)
-      char_index =  if index < 3
-                      Plates::ALPHABET.index(char)
-                    else
-                      char.to_i
-                    end
-
+      char_index =  index < 3 ? Plates::ALPHABET.index(char) : char.to_i
       char_index * Plates::INDEX_VALUES[index]
     end
 
