@@ -16,6 +16,16 @@ describe ColorGenerator do
     color.must_equal("#8ec65b")
   end
 
+  it "returns a color code if a short name is pased" do
+    color = ColorGenerator.generate_color("Ana")
+    color.must_equal("#942df9")
+  end
+
+  it "returns a color code if a long name is pased" do
+    color = ColorGenerator.generate_color("Alejandromedo")
+    color.must_equal("#74e3be")
+  end
+
   it "returns white if name is not pased" do
     color = ColorGenerator.generate_color
     color.must_equal("#000000")
