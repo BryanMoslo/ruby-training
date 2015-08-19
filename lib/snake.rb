@@ -93,7 +93,7 @@ class Snake
     @room[@room.index(tail_row)][tail_row.index(1) + 1] = 1
     @room[@room.index(tail_row)][tail_row.index(1)] = 0
 
-    p @room
+    @room
   end
 
   def self.find_snake
